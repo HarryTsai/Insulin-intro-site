@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+.hide {
+  display: none;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -31,7 +35,7 @@ body {
   background: #FFFFFF;
   border-radius: 30px ;
   padding: 18px 20px;
-  position: relative;
+  position: absolute;
   left: 170px;
   font-weight: bold;
   font-size: 18px;
@@ -51,11 +55,11 @@ body {
 }
 .tip_up {
   color: #2682C6;
-  top: 505px;
+  top: 385px;
 }
 .tip_down {
   color: #DD7F7F;
-  top: 640px;
+  top: 580px;
 }
 .big_photo .tip_up > .top {
   left: 34px;
@@ -66,9 +70,9 @@ body {
   top: -40px;
 }
 .big_photo .tip > img {
-  width: 20px;
+  width: 27px;
   position: absolute;
-  top: 22px;
+  top: 16px;
   right: 20px;
 }
 
@@ -323,7 +327,7 @@ body {
   text-align: center;
   letter-spacing: 0.08em;
   color: #1a5b96;
-  margin-top: 80px;
+  margin-top: 66px;
   margin-bottom: 46px;
 }
 
@@ -375,6 +379,9 @@ body {
 #summary .scene > .row_reverse {
   flex-direction: row-reverse;
 }
+#summary .scene .text_area .text_title {
+  margin-bottom: 28px;
+}
 #summary .scene .text_area .text_title .text_icon {
   height: 50px;
 }
@@ -397,6 +404,16 @@ body {
   width: 100%;
   max-width: 492px;
 }
+.bottom_line {
+  width: 100%;
+  max-width: 1200px;
+  text-align: center;
+  margin: 40px auto 0;
+}
+.bottom_line > img {
+  width: 100%;
+}
+
 #summary .why {
   max-width: 1440px;
   margin: 200px auto 0px;
@@ -422,7 +439,7 @@ body {
 }
 #summary .why > img{
   width: 100%;
-  margin-top: 150px;
+  margin-top: 90px;
 }
 
 /* history */
@@ -436,16 +453,10 @@ body {
   bottom: 0px;
   width: 100%;
   left: 0px;
-  height: 480px;
 }
 #history .review > .title {
-  /* margin: 0 auto;
-  max-width: 216px; */
   text-align: center;
 }
-/* #history .review .title img {
-  width: 100%;
-} */
 
 .timeline {
   height: 734px;
@@ -464,14 +475,12 @@ body {
 }
 
 .entry {
-  /* clear: both; */
   text-align: left;
   position: relative;
   display: flex;
 }
 .entry .title {
   margin-bottom: 0.5em;
-  /* float: left; */
   width: 191px;
   padding-right: 40px;
   padding-top: 13px;
@@ -634,33 +643,38 @@ body {
   color: #1A5B96;
   margin-top: 40px;
 }
-#history .situation .note {
-  margin-top: 38px;
-  color: rgba(199, 85, 88, 0.9);
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 26px;
-  letter-spacing: 0.08em;
-}
-#history .situation .note .source {
-  line-height: 32px;
-  margin-bottom: 8px;
-}
+
 
 
 
 
 /* myth */
 
-#myth {
+.myth {
   background: #F2D2D2;
-  padding: 120px 20px 60px;
+  padding: 40px 20px 60px;
   position: relative;
 }
-#myth .title {
-  text-align: center;
+.myth .note {
+  margin-top: 38px;
+  color: rgba(199, 85, 88, 0.9);
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 26px;
+  letter-spacing: 0.08em;
+  max-width: 804px;
+  margin: auto;
 }
-#myth .cards {
+.myth .note .source {
+  line-height: 32px;
+  margin-bottom: 8px;
+}
+.myth > .title {
+  text-align: center;
+  margin-top: 115px;
+  padding-top: 85px;
+}
+.myth .cards {
   display: flex;
   justify-content: space-between;
   max-width: 1260px;
@@ -668,7 +682,7 @@ body {
   height: 510px;
   overflow: scroll;
 }
-#myth .cards .myth_card {
+.myth .cards .myth_card {
   text-align: center;
   color: #fff;
   max-width: 396px;
@@ -679,11 +693,11 @@ body {
   background-size: cover;
 }
 
-#myth .cards .myth_card:nth-child(2) {
+.myth .cards .myth_card:nth-child(2) {
   margin: 0 17px;
 }
 
-#myth .cards .myth_card .label{
+.myth .cards .myth_card .label{
   padding-top: 36px;
   font-weight: bold;
   font-size: 18px;
@@ -692,7 +706,7 @@ body {
   letter-spacing: 0.08em;
   color: #F2D2D2;
 }
-#myth .cards .myth_card .title{
+.myth .cards .myth_card .title{
   margin: 8px 0 28px;
   font-weight: bold;
   font-size: 28px;
@@ -701,10 +715,10 @@ body {
   letter-spacing: 0.08em;
   width: 396px;
 }
-#myth .cards .myth_card .myth_icon {
+.myth .cards .myth_card .myth_icon {
   width: 200px;
 }
-#myth .cards .myth_card .accordion {
+.myth .cards .myth_card .accordion {
   position: relative;
   text-align: left;
   padding: 12px 0;
@@ -715,16 +729,16 @@ body {
   line-height: 26px;
   letter-spacing: 0.08em;
 }
-#myth .cards .myth_card .accordion::after {
+.myth .cards .myth_card .accordion::after {
   cursor: pointer;
   position: absolute;
   content: "＋";
   right: 0;
 }
-#myth .cards .myth_card .accordion.active::after {
+.myth .cards .myth_card .accordion.active::after {
   content: "－";
 }
-#myth .cards .myth_card .answer {
+.myth .cards .myth_card .answer {
   position: relative;
   text-align: left;
   max-height: 0;
@@ -737,20 +751,20 @@ body {
   background-image: url(../img/icon-bg.png);
   background-size: cover;
 }
-#myth .cards .myth_card .answer .answer_text {
+.myth .cards .myth_card .answer .answer_text {
   margin: 12px 0 20px;
   font-weight: normal;
   font-size: 18px;
   line-height: 26px;
   letter-spacing: 0.08em;
 }
-#myth .text_link_right {
+.myth .text_link_right {
   max-width: 1260px;
   margin: 0 auto;
   text-align: right;
   padding: 0 20px;
 }
-#myth .bottom_img {
+.myth .bottom_img {
   transform: rotate(180deg);
   position: absolute;
   bottom: -182px;
@@ -947,13 +961,13 @@ body {
   line-height: 20px;
 }
 #solution .exercise {
-  border: 2px solid #E28888;
+  border: 2px solid #F2D2D2;
   border-radius: 10px;
   max-width: 1220px;
   margin: 20px auto 0;
   display: flex;
   justify-content: space-between;
-  background: #E28888;
+  background: #F2D2D2;
   color: #1A5B96;
   padding: 40px 60px;
 }
@@ -979,14 +993,14 @@ body {
 #solution .exercise .right img {
   width: 100%;
 }
-#solution .text_link_right {
+/* #solution .text_link_right {
   text-align: right;
   margin: 40px auto 90px;
   max-width: 1220px;
-}
-#solution .bottom_line {
+} */
+/* #solution .bottom_line {
   width: 100%;
-}
+} */
 
 /* celebrity */
 #celebrity {
@@ -1039,14 +1053,14 @@ body {
   letter-spacing: 0.08em;
   color: #1A5B96;
 }
-#celebrity .text_link_right {
+/* #celebrity .text_link_right {
   text-align: right;
   margin: 40px auto 90px;
   max-width: 1220px;
-}
-#celebrity .bottom_line {
+} */
+/* #celebrity .bottom_line {
   width: 100%;
-}
+} */
 #celebrity .support {
   text-align: center;
   margin: 0 auto;
@@ -1168,7 +1182,6 @@ footer p {
     max-width: 1440px;
     display: flex;
     flex-flow: column;
-    justify-content: center;
   }
   #index .container .text {
     max-width: 410px;

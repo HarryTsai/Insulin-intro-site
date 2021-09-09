@@ -22,6 +22,55 @@ body {
 .big_photo img {
   width: 100%;
 }
+.organ {
+  width: 610px;
+}
+.big_photo .tip {
+  width: 272px;
+  height: 60px;
+  background: #FFFFFF;
+  border-radius: 30px ;
+  padding: 18px 20px;
+  position: relative;
+  left: 170px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 26px;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+}
+.big_photo .tip > span{
+  width:0;
+  height:0;
+  font-size:0;
+  overflow:hidden;
+  position:absolute;
+  border-width: 20px;
+  border-style: solid dashed dashed;
+  border-color: transparent transparent #fff;
+}
+.tip_up {
+  color: #2682C6;
+  top: 505px;
+}
+.tip_down {
+  color: #DD7F7F;
+  top: 640px;
+}
+.big_photo .tip_up > .top {
+  left: 34px;
+  top: -40px;
+}
+.big_photo .tip_down > .top {
+  left: 125px;
+  top: -40px;
+}
+.big_photo .tip > img {
+  width: 20px;
+  position: absolute;
+  top: 22px;
+  right: 20px;
+}
 
 .pink_btn {
   width: 160px;
@@ -85,6 +134,30 @@ body {
   background: #2682C6;
 }
 
+/* lightbox */
+
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 10;
+}
+.lightbox .lightbox_content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.lightbox .lightbox_content img {
+  width: 50%;
+  max-width: 680px;
+  min-width: 480px;
+  border-radius: 10px;
+}
+
 /* header */
 
 .header {
@@ -120,11 +193,6 @@ body {
   font-weight: normal;
   margin: 0 12px;
 }
-
-/* .header li a:hover,
-.header .menu-btn:hover {
-  background-color: #f4f4f4;
-} */
 
 .header .logo {
   display: block;
@@ -323,6 +391,7 @@ body {
   line-height: 26px;
   letter-spacing: 0.08em;
   color: #1A5B96;
+  max-width: 427px;
 }
 #summary .scene .photo img {
   width: 100%;
@@ -349,16 +418,8 @@ body {
   margin-bottom: 60px;
   color: #1A5B96;
   max-width: 1012px;
-  margin: 40px auto 60px;
+  margin: 40px auto 0px;
 }
-/* #summary .why .why_photo{
-  position: relative;
-  max-width: 804px;
-  margin: 0 auto;
-}
-#summary .why .why_photo img{
-  width: 100%;
-} */
 #summary .why > img{
   width: 100%;
   margin-top: 150px;
@@ -396,16 +457,6 @@ body {
   position: relative;
   overflow-y: scroll;
 }
-/* .timeline:before {
-  content: "";
-  position: absolute;
-  top: 60px;
-  left: 239px;
-  bottom: 0px;
-  width: 2px;
-  background: #E28888;
-  height: 1450px;
-} */
 .timeline:after {
   content: "";
   display: table;
@@ -427,16 +478,6 @@ body {
   text-align: right;
   position: relative;
 }
-/* .entry .title:before {
-  content: "";
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  background-color: #e28888;
-  border-radius: 100%;
-  top: 10px;
-  right: -7px;
-} */
 .entry .title h3 {
   margin: 0;
   color: #DD7F7F;
@@ -582,7 +623,16 @@ body {
 }
 #history .situation .situation_title {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
+}
+#history .situation .situation_title .text {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: center;
+  letter-spacing: 0.08em;
+  color: #1A5B96;
+  margin-top: 40px;
 }
 #history .situation .note {
   margin-top: 38px;
@@ -1006,9 +1056,81 @@ body {
   margin-top: 137px;
   margin-bottom: 40px;
 }
+#celebrity .team {
+  margin: 90px auto 60px;
+  text-align: center;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 26px;
+  letter-spacing: 0.08em;
+  color: #1A5B96;
+}
 
+/* footer */
 
-@media (min-width: 768px) {
+footer {
+  width: 100%;
+  padding: 30px 0;
+  color: #373737;
+  background: #fff;
+}
+
+footer ul {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+footer ul li {
+  font-size: 15px;
+  line-height: 15px;
+  border-right: 1px solid #373737;
+  padding: 0 10px 0 0;
+  margin: 0 10px 10px 0;
+}
+
+footer ul li:last-child {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer ul li a {
+  color: #373737;
+  line-height: 15px;
+}
+
+footer ul:last-child {
+  margin: 0;
+}
+
+footer p {
+  color: #373737;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  footer ul {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  footer ul li {
+    padding: 0 5px 0 0;
+    margin: 0 5px 10px 0;
+  }
+}
+
+@media (min-width: 769px) {
   .header nav {
     width: 80%;
   }
@@ -1064,7 +1186,7 @@ body {
   }
 }
 
-@media (min-width: 991px) {
+@media (min-width: 992px) {
   .header nav {
     width: 65%;
   }

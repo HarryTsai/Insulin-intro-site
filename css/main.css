@@ -342,9 +342,8 @@ body::-webkit-scrollbar {
   animation-fill-mode: forwards;
   position: relative;
   text-align: center;
-
   margin-top: 66px;
-  margin-bottom: 46px;
+  margin-bottom: 35px;
 }
 
 @keyframes fadeInAnimation {
@@ -1230,6 +1229,13 @@ footer p {
     justify-content: center;
     border-top: 1px solid #fff;
   }
+  #index .container .text_img {
+    width: 90%;
+  }
+  #index .container .text {
+    width: 90%;
+    max-width: none;
+  }
   #summary {
     padding: 0px 10px;
   }
@@ -1247,6 +1253,9 @@ footer p {
   #summary .scene .text_area .text_content {
     font-size: 16px;
     line-height: 30px;
+  }
+  #summary .why .why_title {
+    max-width: 335px;
   }
   #summary .why .why_text {
     font-size: 16px;
@@ -1313,6 +1322,13 @@ footer p {
     font-size: 12px;
     line-height: 17px;
   }
+  #history .review > .title {
+    max-width: 153px;
+    margin: 0 auto;
+  }
+  #history .review > .title img {
+    width: 100%;
+  }
   #history .classroom .subtitle {
     font-size: 21px;
     line-height: 30px;
@@ -1331,6 +1347,9 @@ footer p {
   #history .classroom .banner {
     margin: 0 auto 60px;
   }
+  #history .situation .situation_title img {
+    max-width: 226px;
+  }
   #history .situation .situation_title .text {
     font-size: 16px;
     line-height: 23px;
@@ -1343,7 +1362,11 @@ footer p {
     line-height: 20px;
   }
   .myth > .title {
-    margin-top: 0;
+    margin: 0 auto;
+    max-width: 154px;
+  }
+  .myth > .title img {
+    width: 100%;
   }
   .myth .cards .myth_card {
     max-width: 300px;
@@ -1365,6 +1388,13 @@ footer p {
   .myth .cards .myth_card .answer .answer_text {
     font-size: 16px;
     line-height: 23px;
+  }
+  #solution > .title {
+    margin: 0 auto;
+    max-width: 154px;
+  }
+  #solution > .title img {
+    width: 100%;
   }
   #solution .measure .up {
     flex-direction: column-reverse;
@@ -1471,6 +1501,12 @@ footer p {
     font-size: 16px;
     line-height: 30px;
   }
+  #celebrity .title {
+    max-width: 154px;
+  }
+  #celebrity .title img {
+    width: 100%;
+  }
   #celebrity .card_group .card img {
     width: 252px;
   }
@@ -1514,13 +1550,13 @@ footer p {
     background-position: top center;
     height: 100vh;
     margin: auto;
-    min-height: 709px;
+    min-height: 740px;
     max-width: 1440px;
     display: flex;
     flex-flow: column;
   }
   #index .container .text {
-    max-width: 410px;
+    max-width: 500px;
     font-size: 18px;
     line-height: 26px;
   }

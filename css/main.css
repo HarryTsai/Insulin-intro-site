@@ -215,7 +215,6 @@ body::-webkit-scrollbar {
 .header .logo {
   display: block;
   float: left;
-  /* font-size: 2em; */
   padding: 20px 0;
   margin-left: 60px;
   text-decoration: none;
@@ -342,7 +341,7 @@ body::-webkit-scrollbar {
   animation-fill-mode: forwards;
   position: relative;
   text-align: center;
-  margin-top: 66px;
+  margin-top: 8%;
   margin-bottom: 35px;
 }
 
@@ -1207,6 +1206,9 @@ footer p {
   .mb_hide {
     display: none;
   }
+  .header .logo {
+    margin-left: 20px;
+  }
   .header nav {
     width: auto;
   }
@@ -1287,7 +1289,7 @@ footer p {
     min-width: 315px;
   }
   .timeline {
-    padding: 28px 20px;
+    padding: 28px 25px;
     margin: 60px auto 150px;
   }
   .entry .body {
@@ -1522,6 +1524,10 @@ footer p {
     line-height: 30px;
     margin-bottom: 20px;
   }
+  #celebrity .team {
+    font-size: 16px;
+    line-height: 23px;
+  }
   footer ul {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -1551,7 +1557,6 @@ footer p {
     height: 100vh;
     margin: auto;
     min-height: 740px;
-    max-width: 1440px;
     display: flex;
     flex-flow: column;
   }
@@ -1565,7 +1570,6 @@ footer p {
     width: 100%;
     position: absolute;
     bottom: 0px;
-    max-width: 1440px;
   }
   #index .bottom_img {
     display: none;
